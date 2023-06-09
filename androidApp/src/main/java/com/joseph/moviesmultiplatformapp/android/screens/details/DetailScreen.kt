@@ -35,7 +35,7 @@ fun DetailScreen(
                     contentScale = ContentScale.Crop,
                     modifier = modifier
                         .fillMaxWidth()
-                        .height(380.dp)
+                        .height(400.dp)
                 )
                 Column(
                     modifier = modifier

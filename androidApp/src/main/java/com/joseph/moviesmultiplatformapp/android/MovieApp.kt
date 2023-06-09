@@ -36,7 +36,6 @@ fun MovieApp() {
     val isSystemDark = isSystemInDarkTheme()
     val scaffoldState = rememberScaffoldState()
 
-
     val statusBarColor = if (isSystemDark) MaterialTheme.colors.primaryVariant
     else Color.Transparent
     SideEffect {
@@ -44,7 +43,7 @@ fun MovieApp() {
     }
     val backStackEntry by navController.currentBackStackEntryAsState()
 
-    val currentScreen = movieDestinations.find { movieDestination ->
+    val currentScreen =  movieDestinations.find { movieDestination ->
         backStackEntry?.destination?.route == movieDestination.route ||
                 backStackEntry?.destination?.route == movieDestination.routeWithArgs
     } ?: Home

@@ -23,9 +23,10 @@ kotlin {
         }
     }
 
+    //dependencies versions
     val coroutinesVersion = "1.6.4"
-    val ktorVersion = "2.2.1"
     val koinVersion = "3.3.2"
+    val ktorVersion = "2.2.1"
 
     sourceSets {
         val commonMain by getting {
@@ -33,24 +34,27 @@ kotlin {
                 implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:$coroutinesVersion")
                 implementation("io.ktor:ktor-client-core:$ktorVersion")
                 implementation("io.ktor:ktor-client-content-negotiation:$ktorVersion")
-                implementation("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
+                api("io.ktor:ktor-serialization-kotlinx-json:$ktorVersion")
 
                 api("io.insert-koin:koin-core:$koinVersion")
             }
         }
+
+
         val commonTest by getting {
             dependencies {
                 implementation(kotlin("test"))
             }
         }
 
+
         val androidMain by getting {
             dependencies {
-                implementation("io.ktor:ktor-client-android:$ktorVersion")
-
                 api("io.insert-koin:koin-android:$koinVersion")
+                implementation("io.ktor:ktor-client-android:$ktorVersion")
             }
         }
+
         val androidUnitTest by getting
         val iosX64Main by getting
         val iosArm64Main by getting
