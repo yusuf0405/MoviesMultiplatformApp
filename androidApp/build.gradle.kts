@@ -45,6 +45,7 @@ dependencies {
     val navVersion = "2.5.3"
 
     implementation(project(":shared"))
+    implementation ("com.google.accompanist:accompanist-insets:0.14.0")
     implementation("androidx.compose.ui:ui:1.4.0")
     implementation("androidx.compose.ui:ui-tooling:1.4.0")
     implementation("androidx.compose.ui:ui-tooling-preview:1.4.0")

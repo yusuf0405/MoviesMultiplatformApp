@@ -38,10 +38,10 @@ struct DetailScreen: View {
                         
                         HStack{
                             Image(systemName: "play.fill")
-                                .foregroundColor(.black)
+                                .foregroundColor(.white)
                             
                             Text("Start wathing now")
-                           .foregroundColor(.black)
+                           .foregroundColor(.white)
                             
                         }
                     }.frame(maxWidth: .infinity, maxHeight: 40)

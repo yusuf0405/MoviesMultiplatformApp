@@ -1,6 +1,5 @@
 package com.joseph.moviesmultiplatformapp.android
 
-import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.MaterialTheme
 import androidx.compose.material.Shapes
@@ -16,7 +15,7 @@ import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 
 @Composable
-fun MyApplicationTheme(
+fun MovieApplicationTheme(
     darkTheme: Boolean = true,
     content: @Composable () -> Unit
 ) {
@@ -61,3 +60,4 @@ val DARK2 = Color(red = 28, green = 29, blue = 35)
 val DARK3 = Color(red = 31, green = 31, blue = 36)
 val DARK4 = Color(red = 34, green = 35, blue = 48)
 val Red = Color(red = 220, green = 0, blue = 59)
+val APP_BAR_HIGH = 56.dp

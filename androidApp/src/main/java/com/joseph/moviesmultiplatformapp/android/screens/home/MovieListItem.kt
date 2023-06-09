@@ -16,10 +16,26 @@ import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
+import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import coil.compose.AsyncImage
+import com.joseph.moviesmultiplatformapp.android.MovieApplicationTheme
 import com.joseph.moviesmultiplatformapp.android.R
 import com.joseph.moviesmultiplatformapp.domain.models.Movie
+
+@Preview
+@Composable
+fun MovieListItemPreview() {
+    MovieApplicationTheme {
+        MovieListItem(
+            movie = Movie.avatar,
+            onMovieClick = {
+
+            }
+        )
+    }
+
+}
 
 @Composable
 fun MovieListItem(
@@ -30,7 +46,7 @@ fun MovieListItem(
 
     Card(
         modifier = modifier
-            .height(220.dp)
+            .height(280.dp)
             .clickable { onMovieClick(movie) },
         shape = RoundedCornerShape(8.dp)
     ) {
@@ -46,7 +62,12 @@ fun MovieListItem(
                     contentScale = ContentScale.Crop,
                     modifier = modifier
                         .fillMaxSize()
-                        .clip(RoundedCornerShape(bottomStart = 2.dp, bottomEnd = 2.dp))
+                        .clip(
+                            RoundedCornerShape(
+                                bottomStart = 2.dp,
+                                bottomEnd = 2.dp
+                            )
+                        )
                 )
 
                 Icon(
@@ -58,23 +79,23 @@ fun MovieListItem(
                     tint = Color.White.copy(alpha = 0.6f)
                 )
             }
-        }
 
-        Column(
-            modifier = modifier.padding(10.dp)
-        ) {
-            Text(
-                text = movie.title,
-                style = MaterialTheme.typography.subtitle1,
-                fontWeight = FontWeight.Bold,
-                maxLines = 1,
-                overflow = TextOverflow.Ellipsis
-            )
-            Spacer(modifier = modifier.height(4.dp))
-            Text(
-                text = movie.releaseDate,
-                style = MaterialTheme.typography.caption,
-            )
+            Column(
+                modifier = modifier.padding(10.dp)
+            ) {
+                Text(
+                    text = movie.title,
+                    style = MaterialTheme.typography.subtitle1,
+                    fontWeight = FontWeight.Bold,
+                    maxLines = 1,
+                    overflow = TextOverflow.Ellipsis
+                )
+                Spacer(modifier = modifier.height(4.dp))
+                Text(
+                    text = movie.releaseDate,
+                    style = MaterialTheme.typography.caption,
+                )
+            }
         }
 
     }

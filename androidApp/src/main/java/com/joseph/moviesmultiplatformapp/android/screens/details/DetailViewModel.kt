@@ -7,6 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.joseph.moviesmultiplatformapp.domain.models.Movie
 import com.joseph.moviesmultiplatformapp.domain.use_cases.FetchMovieUseCase
+import kotlinx.coroutines.delay
 import kotlinx.coroutines.launch
 
 data class DetailScreenState(
@@ -28,6 +29,7 @@ class DetailViewModel(
 
     private fun loadMovie(movieId: Int) = viewModelScope.launch {
         uiState = uiState.copy(loading = true)
+        delay(1000)
         runCatching {
             fetchMovieUseCase(movieId = movieId)
         }.onSuccess { movie ->

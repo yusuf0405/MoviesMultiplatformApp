@@ -46,8 +46,8 @@ fun HomeScreen(
             verticalArrangement = Arrangement.spacedBy(16.dp),
         ) {
             itemsIndexed(
-                uiState.movies,
-                key = { _, movie -> movie.id },
+                uiState.movies.toSet().toList(),
+                key = { _, movie -> movie.hashCode() },
             ) { index, movie ->
                 MovieListItem(movie = movie, onMovieClick = { navigateToDetail(movie) })
                 if (index >= uiState.movies.size - 1 && !uiState.loading && !uiState.loadFinished) {
