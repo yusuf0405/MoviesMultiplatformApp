@@ -2,6 +2,8 @@
 
 ## Overview
 
+[<img width="400" alt="image" src="https://github.com/yusuf0405/MoviesMultiplatformApp/blob/master/assets/screenshots/preview/preview.png">]()
+
 MovieApp is a Kotlin Multiplatform (KMP) project designed to display movies and their descriptions
 across Android and iOS platforms. The app leverages Jetpack Compose for Android and SwiftUI for iOS
 to ensure a native and seamless user experience.
