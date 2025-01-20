@@ -110,9 +110,11 @@ fun DetailScreen(
                         .padding(10.dp)
                 ) {
                     Text(
-                        text = movie.title,
+                        modifier = modifier,
+                        text = uiState.movie.title,
                         style = MaterialTheme.typography.h5,
-                        fontWeight = FontWeight.Bold
+                        fontWeight = FontWeight.Bold,
+
                     )
                     Spacer(modifier = modifier.height(8.dp))
                     Button(

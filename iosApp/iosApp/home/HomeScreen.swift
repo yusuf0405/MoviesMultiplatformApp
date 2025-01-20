@@ -12,7 +12,6 @@ struct HomeScreen: View {
         if #available(iOS 16.0, *) {
             NavigationStack{
                 ScrollView{
-                    
                     LazyVGrid(columns: gridColums, spacing: 16){
                         ForEach(viewModel.movies, id: \.id){movie in
                             NavigationLink(value: movie){
@@ -38,8 +37,6 @@ struct HomeScreen: View {
             }.task {
                 await viewModel.loadMovies()
             }
-        } else {
-            // Fallback on earlier versions
         }
 	}
 }

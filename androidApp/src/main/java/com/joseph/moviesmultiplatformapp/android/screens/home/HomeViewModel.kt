@@ -35,8 +35,8 @@ class HomeViewModel(
 
         viewModelScope.launch {
             uiState = uiState.copy(loading = true)
-            val resultMovies = fetchAllMoviesUseCase.invoke(currentPage)
             runCatching {
+                val resultMovies = fetchAllMoviesUseCase.invoke(currentPage)
                 if (currentPage == 1) resultMovies else uiState.movies + resultMovies
             }.onSuccess { movies ->
                 currentPage += 1

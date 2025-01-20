@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -12,6 +12,7 @@
 		2152FB042600AC8F00CF470E /* iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2152FB032600AC8F00CF470E /* iOSApp.swift */; };
 		7555FF83242A565900829871 /* HomeScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7555FF82242A565900829871 /* HomeScreen.swift */; };
 		7C7B1D772A33088400E76BFD /* DetailScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7C7B1D762A33088400E76BFD /* DetailScreen.swift */; };
+		7C966FDA2A3710AD00A9778C /* SwiftUIPager in Frameworks */ = {isa = PBXBuildFile; productRef = 7C966FD92A3710AD00A9778C /* SwiftUIPager */; };
 		7CF8A6342A328E42001CA4E6 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8A6332A328E42001CA4E6 /* HomeViewModel.swift */; };
 		7CF8A6382A3292D8001CA4E6 /* Sample.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8A6372A3292D8001CA4E6 /* Sample.swift */; };
 		7CF8A63A2A3294A4001CA4E6 /* MovieGridItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7CF8A6392A3294A4001CA4E6 /* MovieGridItem.swift */; };
@@ -48,6 +49,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7C966FDA2A3710AD00A9778C /* SwiftUIPager in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -144,6 +146,9 @@
 			dependencies = (
 			);
 			name = iosApp;
+			packageProductDependencies = (
+				7C966FD92A3710AD00A9778C /* SwiftUIPager */,
+			);
 			productName = iosApp;
 			productReference = 7555FF7B242A565900829871 /* iosApp.app */;
 			productType = "com.apple.product-type.application";
@@ -172,6 +177,9 @@
 				Base,
 			);
 			mainGroup = 7555FF72242A565900829871;
+			packageReferences = (
+				7C966FD82A3710AD00A9778C /* XCRemoteSwiftPackageReference "SwiftUIPager" */,
+			);
 			productRefGroup = 7555FF7C242A565900829871 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -424,6 +432,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		7C966FD82A3710AD00A9778C /* XCRemoteSwiftPackageReference "SwiftUIPager" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/fermoya/SwiftUIPager.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		7C966FD92A3710AD00A9778C /* SwiftUIPager */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 7C966FD82A3710AD00A9778C /* XCRemoteSwiftPackageReference "SwiftUIPager" */;
+			productName = SwiftUIPager;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 7555FF73242A565900829871 /* Project object */;
 }
